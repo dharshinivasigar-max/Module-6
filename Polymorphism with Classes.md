@@ -26,7 +26,35 @@ To create two specific classes — `Beans` and `Mango`. Then, create a **generic
 ---
 
 ## 💻 Program
+~~~
+class Beans:
+    def type(self):
+        print("Vegetable")
+    
+    def color(self):
+        print("Green")
 
+class Mango:
+    def type(self):
+        print("Fruit")
+    
+    def color(self):
+        print("Yellow")
+
+def func(obj):
+    obj.type()
+    obj.color()
+
+obj_beans = Beans()
+obj_mango = Mango()
+
+func(obj_beans)
+func(obj_mango)
+~~~
 ## Output
-
+Vegetable
+Green
+Fruit
+Yellow
 ## Result
+The program initializes a list with a sequence of integers and utilizes Python's built-in sum() function to iterate through the collection and compute the aggregate total. This approach is more efficient than using a manual for loop, as the built-in function is highly optimized for numerical operations.

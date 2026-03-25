@@ -23,7 +23,18 @@ To implement **Encapsulation** in Python by defining a class `Rectangle` with **
 ---
 
 ## 💻 Program
+~~~
+class Rectangle:
+    def __init__(self, length, breadth):
+        self.__length = length
+        self.__breadth = breadth
+        
+        print(f"Inside Constructor - Length: {self.__length}, Breadth: {self.__breadth}")
+
+rect = Rectangle(10, 5)
+~~~
 
 ## Output
-
+Inside Constructor - Length: 10, Breadth: 5
 ## Result
+The program demonstrates Encapsulation by defining private attributes using the double underscore prefix (__). In Python, this triggers name mangling, which makes these variables inaccessible from outside the class instance. As shown, while the class can freely access self.__length and self.__breadth within its own methods (like the constructor), an attempt to print rect.__length from the main script would result in an AttributeError.
